@@ -4,6 +4,7 @@ A kickstarter esque crowdfunding website which utilizes ethereum and blockchain 
 ## Built with:
 * Solidity
 * JavaScript
+* Mocha
 * Next.js
     * React
 * Semantic UI
