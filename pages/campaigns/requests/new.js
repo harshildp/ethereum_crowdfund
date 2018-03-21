@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Form, Input, Message, Button } from 'semantic-ui-react';
+import { Form, Input, Message, Button, Icon } from 'semantic-ui-react';
 import Campaign from '../../../ethereum/campaign';
 import web3 from '../../../ethereum/web3';
 import { Link, Router } from '../../../routes';
@@ -47,7 +47,19 @@ class RequestNew extends Component {
         return (
             <Layout>
                 <Link route={`/campaigns/${this.props.address}/requests`}>
-                    <a>Back</a>
+                    <a>
+                        <Button
+                            animated
+                            floated='right'
+                            size='mini'
+                            secondary
+                        >
+                            <Button.Content visible>Back</Button.Content>
+                            <Button.Content hidden>
+                                <Icon name='chevron left' />
+                            </Button.Content>
+                        </Button>
+                    </a>
                 </Link>
                 <h3>Create a Request</h3>
                 <Form onSubmit={this.onSubmit} error={!!this.state.errorMessage}>

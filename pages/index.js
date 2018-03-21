@@ -30,20 +30,20 @@ class CampaignIndex extends Component {
     render() {
         return (
             <Layout>
-                <div>
-                    <h3>Open Campaigns</h3>
-                    <Link route='campaigns/new'>
-                        <a>
-                            <Button
-                                floated='right'
-                                content='Create Campaign'
-                                icon='add circle'
-                                primary
-                            />
-                        </a>
-                    </Link>
-                    {this.renderCampaigns()}                    
-                </div>
+                <h3>Open Campaigns</h3>
+                <Link route='campaigns/new'>
+                    <a>
+                        <Button
+                            floated='right'
+                            size='big'
+                            content='Create Campaign'
+                            icon='add circle'
+                            labelPosition='left'
+                            primary
+                        />
+                    </a>
+                </Link>
+                {this.renderCampaigns()}                    
             </Layout>
         );
     }
