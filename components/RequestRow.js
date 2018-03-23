@@ -28,7 +28,7 @@ class RequestRow extends Component {
         const ready = request.approvalCount > approversCount / 2;
         
         return(
-            <Row disabled={request.complete} positive={ready && !request.complete}>
+            <Row disabled={request.complete} positive={ready && !request.complete} textAlign='center'>
                 <Cell>{id}</Cell>
                 <Cell>{request.description}</Cell>
                 <Cell>{web3.utils.fromWei(request.value, 'ether')}</Cell>
