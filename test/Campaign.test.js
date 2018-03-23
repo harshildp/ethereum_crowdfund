@@ -16,11 +16,11 @@ beforeEach(async () => {
 
     factory = await new web3.eth.Contract(JSON.parse(compiledFactory.interface))
         .deploy({ data: compiledFactory.bytecode })
-        .send({ from: accounts[0], gas: '100000000' });
+        .send({ from: accounts[0], gas: '3000000' });
 
     await factory.methods.createCampaign('100', "Lightsaber", "From Starwars").send({
         from: accounts[0],
-        gas: '100000000'
+        gas: '3000000'
     });
 
     [campaignAddress] = await factory.methods.getCampaigns().call();
